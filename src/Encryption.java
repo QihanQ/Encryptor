@@ -11,7 +11,7 @@ public class Encryption {
 
     public void horizontalShiftPos()
     {
-        int s = Math.abs(shiftCol);
+        int s = Math.abs(shiftRow);
         for(int r = 0; r < arr.length; r++)
         {
             for(int i = 0; i < s; i++)
@@ -28,7 +28,7 @@ public class Encryption {
 
     public void horizontalShiftNeg()
     {
-        int s = Math.abs(shiftCol);
+        int s = Math.abs(shiftRow);
         for(int r = 0; r < arr.length; r++)
         {
             for(int i = 0; i < s; i++)
@@ -46,16 +46,16 @@ public class Encryption {
     public void verticalShiftPos()
     {
         int s = Math.abs(shiftCol);
-        for(int r = 0; r < arr.length; r++)
+        for(int c = 0; c < arr[0].length; c++)
         {
-            String temp = arr[arr.length - 1][0];
+            String temp = arr[arr.length - 1][c];
             for(int i = 0; i < s; i++)
             {
                 for(int num = arr.length - 1; num > 0; num--)
                 {
-                    arr[num][0] = arr[num - 1][0];
+                    arr[num][c] = arr[num - 1][c];
                 }
-                arr[0][0] = temp;
+                arr[0][c] = temp;
             }
         }
     }
@@ -63,16 +63,16 @@ public class Encryption {
     public void verticalShiftNeg()
     {
         int s = Math.abs(shiftCol);
-        for(int r = 0; r < arr.length; r++)
+        for(int c = 0; c < arr[0].length; c++)
         {
-            String temp = arr[0][0];
+            String temp = arr[0][c];
             for(int i = 0; i < s; i++)
             {
-                for(int num = 0; num < arr.length - 1; num++)
+                for(int num = 0; num < arr[0].length - 1; num++)
                 {
-                    arr[num][0] = arr[num + 1][0];
+                    arr[num][c] = arr[num + 1][c];
                 }
-                arr[arr.length - 1][0] = temp;
+                arr[arr.length - 1][c] = temp;
             }
         }
     }
