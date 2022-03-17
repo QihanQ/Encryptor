@@ -48,9 +48,9 @@ public class Encryption {
         int s = Math.abs(shiftCol);
         for(int c = 0; c < arr[0].length; c++)
         {
-            String temp = arr[arr.length - 1][c];
             for(int i = 0; i < s; i++)
             {
+                String temp = arr[arr.length - 1][c];
                 for(int num = arr.length - 1; num > 0; num--)
                 {
                     arr[num][c] = arr[num - 1][c];
@@ -65,9 +65,9 @@ public class Encryption {
         int s = Math.abs(shiftCol);
         for(int c = 0; c < arr[0].length; c++)
         {
-            String temp = arr[0][c];
             for(int i = 0; i < s; i++)
             {
+                String temp = arr[0][c];
                 for(int num = 0; num < arr[0].length - 1; num++)
                 {
                     arr[num][c] = arr[num + 1][c];

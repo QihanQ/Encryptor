@@ -6,7 +6,7 @@ public class Main {
                 {"d","e","f"},
                 {"g","h","i"}
         };
-        Encryption e = new Encryption(arr,2,1);
+        Encryption e = new Encryption(arr,2,3);
         e.encrypt();
         for(String[] a : arr)
         {
